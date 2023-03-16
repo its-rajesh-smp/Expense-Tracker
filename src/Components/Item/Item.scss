@@ -1,0 +1,34 @@
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+.item-div--div{
+    display: flex;
+    font-size: 12px;
+    align-items: flex-end;
+    color: #4c4c4c;
+    :last-child{
+        margin-left: 5px;
+        font-size: 11px;
+    }
+}
+.item_Name{
+    font-weight:500;
+}
+.item_Price{
+    font-weight: 500;
+}
+
+//!======================= Item Cover Div Start
+
+.Item_Cover-div{
+    margin-bottom: 50px;
+}
+.Item_Cover-div--span{
+    color: #D61355;
+    font-size: small;
+    border-bottom: 2px solid #D61355;
+}
+//!======================= Item Cover Div End

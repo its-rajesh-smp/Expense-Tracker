@@ -1,0 +1,20 @@
+.SideNavCard {
+  display: flex;
+  padding: 5px;
+  background-color: #ECF2FF;
+  margin: 20px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px -1px black;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+}
+.SideNavCard i, .SideNavCard p {
+  padding: 10px;
+}
+
+.SideNavCard:hover {
+  background-color: rgba(133, 184, 255, 0.401);
+  transition-property: background-color;
+  transition-duration: 500ms;
+  color: #b02a58;
+}/*# sourceMappingURL=Card.css.map */
