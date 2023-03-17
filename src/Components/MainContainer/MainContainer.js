@@ -5,10 +5,16 @@ import Statistics from '../Statistics/Statistics'
 
 function MainContainer(){
 
+    const input="Transaction"   //! If Check
+
+
     return(
         <div className="main_container">
-            <Transaction></Transaction> 
-            {/* <Statistics></Statistics>  */}
+
+            {
+                input=="Transaction" ? <Transaction></Transaction> : <Statistics></Statistics> 
+            }
+
         </div>
     )
 }

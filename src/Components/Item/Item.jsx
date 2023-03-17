@@ -1,9 +1,20 @@
 import React from "react";
 import "./Item.css"
 
+
+function Item_Cover(props){
+    return(
+        <div className="Item_Cover-div">
+            <span className="Item_Cover-div--span">{props.date}</span>
+            {props.children}
+        </div>
+    )
+}
+
+
 function Item(props){
     return (
-        <div className="item">
+        <div className="item" onClick={editListHandeler}>
             <div className="item-div">
                 <p className="item_Name">{props.name}</p>
                 <div className="item-div--div" >
@@ -16,15 +27,11 @@ function Item(props){
     )
 }
 
-
-function Item_Cover(props){
-    return(
-        <div className="Item_Cover-div">
-            <span className="Item_Cover-div--span">{props.date}</span>
-            {props.children}
-        </div>
-    )
+function editListHandeler(){
+    alert("Edit Function Called")
 }
+
+
 
 export default Item;
 export  {Item_Cover};

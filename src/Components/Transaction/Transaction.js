@@ -2,10 +2,13 @@ import React from "react";
 import "./Transaction.css";
 import InputField from "../InputField/Input"
 import Item,{Item_Cover} from "../Item/Item";
+import AddNew from "../AddNew/AddNew";
+
 
 function Transaction(){
     return(
         <>
+            <AddNew></AddNew>
             <h1>Transaction</h1>
             <InputField></InputField>
 
@@ -43,6 +46,10 @@ function Transaction(){
         </>
     )
 }
+
+
+
+
 
 
 export default Transaction;
