@@ -12,4 +12,14 @@ function SideNavCard(props){
 
 
 
-export {SideNavCard};
+function StatusCard(props){
+    return(
+        <div className="Status_Card">
+            <p className="Status_Card-for" >{props.for}</p>
+            <p><span className="Status_Card-price">{props.price}</span> $</p>
+        </div>
+
+    )
+}
+
+export {SideNavCard,StatusCard};

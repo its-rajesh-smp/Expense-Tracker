@@ -10,7 +10,7 @@ function Header(){
                 <i className='bx bx-menu'></i>
             </div>
 
-            <SideNavCard name={"Transaction"} icon={<i className='bx bx-transfer-alt' ></i>} />
+            <SideNavCard cla name={"Transaction"} icon={<i className='bx bx-transfer-alt' ></i>} />
             <SideNavCard name={"Budgets"}  icon={<i className='bx bx-wallet'></i>} />
             <SideNavCard name={"Bills"}  icon={<i className='bx bx-receipt'></i>} />
             <SideNavCard name={"Statistics"}  icon={<i className='bx bx-stats' ></i>} />

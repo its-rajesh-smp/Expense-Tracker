@@ -17,4 +17,25 @@
   transition-property: background-color;
   transition-duration: 500ms;
   color: #b02a58;
+}
+
+.Status_Card {
+  width: 200px;
+  height: 200px;
+  background-color: #E5D1FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+  box-shadow: 1px 1px 5px black;
+}
+
+.Status_Card-for {
+  font-size: xx-large;
+}
+
+.Status_Card-price {
+  font-size: x-large;
 }/*# sourceMappingURL=Card.css.map */
