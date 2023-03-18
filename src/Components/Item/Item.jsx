@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Item.css"
+import AddEditCard from '../AddEditCard/AddEditCard'
 
 
-function Item_Cover(props){
+
+function ItemCover(props){
     return(
         <div className="Item_Cover-div">
             <span className="Item_Cover-div--span">{props.date}</span>
@@ -13,8 +15,17 @@ function Item_Cover(props){
 
 
 function Item(props){
+    let [value,func]=useState(false)
+
+    function openEditor(){
+        if(value==true){return}
+        else{func(true)}
+    }
+
     return (
-        <div className="item" onClick={editListHandeler}>
+
+        <div className="item" onClick={openEditor}>
+            {value && <AddEditCard name={props.name} date={props.date} time={props.time} price={props.price}  />}
             <div className="item-div">
                 <p className="item_Name">{props.name}</p>
                 <div className="item-div--div" >
@@ -27,11 +38,9 @@ function Item(props){
     )
 }
 
-function editListHandeler(){
-    alert("Edit Function Called")
-}
+
 
 
 
 export default Item;
-export  {Item_Cover};
+export  {ItemCover};

@@ -5,7 +5,7 @@ import Statistics from '../Statistics/Statistics'
 
 function MainContainer(){
 
-    const input="Transaction"   //! If Check
+    const input="Transaction"   //! 
 
 
     return(

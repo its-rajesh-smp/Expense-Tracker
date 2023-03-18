@@ -6,7 +6,7 @@ function InputField(){
         <div className="input_fields">
             <div>
                 <i className='bx bx-search-alt'></i>
-                <input type="text" placeholder="Search.."  />
+                <input type="text" placeholder="Search.." defaultValue="" />
             </div>
             <select>
                 <option>Filter</option>

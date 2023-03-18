@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css'
 import {SideNavCard} from "../Cards/Card.js"
 
 function Header(){
+
+
+
     return (
         <div className='sideNav' >
             <div className='sideNav_top'>
@@ -10,7 +13,7 @@ function Header(){
                 <i className='bx bx-menu'></i>
             </div>
 
-            <SideNavCard cla name={"Transaction"} icon={<i className='bx bx-transfer-alt' ></i>} />
+            <SideNavCard name={"Transaction"} icon={<i className='bx bx-transfer-alt' ></i>} />
             <SideNavCard name={"Budgets"}  icon={<i className='bx bx-wallet'></i>} />
             <SideNavCard name={"Bills"}  icon={<i className='bx bx-receipt'></i>} />
             <SideNavCard name={"Statistics"}  icon={<i className='bx bx-stats' ></i>} />

@@ -7,7 +7,7 @@ import './App.css'
 function App(){
   return (
     <div className="main_body" >
-      <Header/>
+      {/* <Header></Header> */}
       <MainContainer/>
     </div>
   )

@@ -1,0 +1,78 @@
+.blur{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.458);
+    cursor:default;
+}
+
+.Add_Edit_Card{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    width: 400px;
+    height: 400px;
+    box-sizing: border-box;
+    background-color: #d17696;
+    padding: 20px;
+    font-family: "poppins","sans-serif";
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 1px black;
+}
+.Add_or_Edit{
+    font-size: 30px;
+}
+.Add_or_Edit_list{
+    background-color: #83a0de ;
+    border-radius: 10px;
+}
+.Add_or_Edit_input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    .Add_or_Edit_input-name{
+        height: 35px;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .Add_or_Edit_input-date, .Add_or_Edit_input-time{
+        height: 35px;
+        padding-left: 15px;
+        padding-right: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+        border: none;
+    }
+    .Add_or_Edit_input-price{
+        height: 35px;
+        width: 195px;
+        padding-left: 5px; 
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    .Add_or_Edit_input-button{
+        margin-top: 30px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    
+}

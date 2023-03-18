@@ -1,7 +1,7 @@
 import React from "react";
 import "./AddNew.css";
 
-function AddNew() {
+function AddNewBtn() {
   return <div onClick={addClickHandaler} className="AddNew-div">+</div>;
 }
 
@@ -13,4 +13,4 @@ function addClickHandaler(){
 
 
 
-export default AddNew;
+export default AddNewBtn;
