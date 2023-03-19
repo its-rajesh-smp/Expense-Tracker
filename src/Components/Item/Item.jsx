@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Item.css"
-import AddEditCard from '../AddEditCard/AddEditCard'
+import {EditCard} from '../AddEditCard/AddEditCard'
 
 
 
@@ -18,14 +18,14 @@ function Item(props){
     let [value,func]=useState(false)
 
     function openEditor(){
-        if(value==true){return}
+        if(value===true){return}
         else{func(true)}
     }
 
     return (
 
         <div className="item" onClick={openEditor}>
-            {value && <AddEditCard name={props.name} date={props.date} time={props.time} price={props.price}  />}
+            {value && <EditCard name={props.name} date={props.date} time={props.time} price={props.price}  />}
             <div className="item-div">
                 <p className="item_Name">{props.name}</p>
                 <div className="item-div--div" >

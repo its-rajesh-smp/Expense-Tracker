@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./AddNew.css";
-import AddEditCard from "../AddEditCard/AddEditCard";
+import {AddCard} from "../AddEditCard/AddEditCard";
 
 function AddNewBtn() {
 
   const[setCard,setFunc]=useState(false)
 
   function addClickHandaler(){
-    setCard==false ? setFunc(true) : setFunc(true)
+    setCard===false ? setFunc(true) : setFunc(true)
   }
 
   return(
     <>
-      {setCard && <AddEditCard />}
+      {setCard && <AddCard />}
       <div onClick={addClickHandaler} className="AddNew-div">+</div>;
     </>
     ) 
