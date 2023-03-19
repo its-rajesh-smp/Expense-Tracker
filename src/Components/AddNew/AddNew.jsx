@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AddNew.css";
+import AddEditCard from "../AddEditCard/AddEditCard";
 
 function AddNewBtn() {
-  return <div onClick={addClickHandaler} className="AddNew-div">+</div>;
+
+  const[setCard,setFunc]=useState(false)
+
+  function addClickHandaler(){
+    setCard==false ? setFunc(true) : setFunc(true)
+  }
+
+  return(
+    <>
+      {setCard && <AddEditCard />}
+      <div onClick={addClickHandaler} className="AddNew-div">+</div>;
+    </>
+    ) 
+    
 }
 
 
 
-function addClickHandaler(){
-    alert("Btn Clicked")
-}
+
 
 
 
