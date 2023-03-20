@@ -1,55 +1,62 @@
 import React, { useState } from "react";
 import "./Transaction.css";
-import InputField from "../InputField/Input"
-import Item,{ItemCover} from "../Item/Item";
-import AddNewBtn from "../AddNew/AddNew";
+import InputField from "../InputField/Input";
+import { ItemCover } from "../Item/Item";
+import AddNewBtn from "../AddNewButton/AddNewButton";
+import Item from "../Item/Item";
+import { HeadingDiv, TotalAmount } from "../SillyComponents/SillyComponent";
+import AddExpenseCard from "../AddExpenseCard/AddExpenseCard";
+import DATA from "../../date";
 
+function Transaction() {
+  // useState For AddExpenseCard-Opener
+  const [AddExpenseCard_BOOL, setAddExpenseCard_BOOL] = useState(false);
 
+  function addExpenseCardHandeler() {
+    // handelerFunctionForOpen AddExpenseCard
+    setAddExpenseCard_BOOL(true);
+  }
 
-function Transaction(){
+  // useState For updatingDataArray
+  let [arrayOfData, setArrayOfData] = useState(DATA);
 
-    // For TopMost Date In Transaction Window
-    let date=new Date()
-    let getDate=date.toLocaleDateString()
-    
+  return (
+    <>
+      <AddNewBtn
+        onClick={
+          addExpenseCardHandeler /*Open AddExpenseCard on click inside tag */
+        }
+      />
+      {AddExpenseCard_BOOL && (
+        <AddExpenseCard
+          onSetArrayData={setArrayOfData /**For UpdatingArrayValue */}
+          onClick={
+            setAddExpenseCard_BOOL /* Close AddExpenseCard on click inside tag */
+          }
+        />
+      )}
 
-    const [newList,setNewList]=useState([])
+      <HeadingDiv name="Transections" />
 
+      <InputField />
 
+      <TotalAmount amount="2000" />
 
-    return(
-        <>
-
-            <AddNewBtn effect={false} listHandeler={setNewList /*Passing This useState function to change the value in AddCard Component whenver someone click on Submit */ } />
-
-            
-            <div className="Heading-div">
-                <h1>Transaction</h1>
-                <p style={{marginLeft:"10px"}}>Today: </p>
-                <p style={{marginLeft:"10px"}}>{getDate}</p>
-            </div>
-
-
-            <InputField></InputField>
-
-
-            <div className="transaction_div" style={{fontWeight:600}} >
-                <p>Total:</p>
-                <p><span className="transaction_div--total" >2000</span> $</p>
-            </div>
-
-
-            <ItemCover date="2022-03-0" >
-                {newList}
-            </ItemCover>
-
-        </>
-    )
+      <ItemCover date="2022-03-0">
+        {arrayOfData.map((value, i) => {
+          return (
+            <Item
+              name={value.name}
+              price={value.price}
+              date={value.date}
+              time={value.time}
+              key={i}
+            />
+          );
+        })}
+      </ItemCover>
+    </>
+  );
 }
-
-
-
-
-
 
 export default Transaction;

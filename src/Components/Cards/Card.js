@@ -23,9 +23,19 @@ function StatusCard(props) {
 }
 
 
+function BlurCard(props){
+    // document.querySelector("#root").style.overflow
+    return (
+        <div className="blurCard">
+            {props.children}
+        </div>
+    )
+}
 
 
 
 
 
-export { SideNavCard, StatusCard };
+
+
+export { SideNavCard, StatusCard,BlurCard };

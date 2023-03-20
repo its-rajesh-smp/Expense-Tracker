@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Item.css"
-import {EditCard} from '../AddEditCard/AddEditCard'
 
 
 
+// Iterm Wrapper Card
 function ItemCover(props){
     return(
         <div className="Item_Cover-div">
@@ -14,18 +14,13 @@ function ItemCover(props){
 }
 
 
-function Item(props){
-    let [value,func]=useState(false)
 
-    function openEditor(){
-        if(value===true){return}
-        else{func(true)}
-    }
+//! Item Card
+function Item(props){
 
     return (
 
-        <div className="item" onClick={openEditor}>
-            {value && <EditCard name={props.name} date={props.date} time={props.time} price={props.price}  />}
+        <div className="item">
             <div className="item-div">
                 <p className="item_Name">{props.name}</p>
                 <div className="item-div--div" >
