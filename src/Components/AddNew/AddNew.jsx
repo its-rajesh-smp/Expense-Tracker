@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./AddNew.css";
-import {AddCard} from "../AddEditCard/AddEditCard";
 
-function AddNewBtn() {
+import {AddCard} from "../AddEditCard/AddCard";
 
-  const[setCard,setFunc]=useState(false)
+
+
+
+function AddNewBtn(props) {
+
+  const[setCard,setFunc]=useState(props.effect)
 
   function addClickHandaler(){
     setCard===false ? setFunc(true) : setFunc(true)
@@ -12,7 +16,7 @@ function AddNewBtn() {
 
   return(
     <>
-      {setCard && <AddCard />}
+      {setCard && <AddCard effect={setFunc} listHandeler={props.listHandeler}/> /*Passing  A Function To AddCard with the useState function when we execute this function it effect in this component */} 
       <div onClick={addClickHandaler} className="AddNew-div">+</div>;
     </>
     ) 
