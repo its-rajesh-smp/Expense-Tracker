@@ -17,46 +17,57 @@ function Transaction() {
     setAddExpenseCard_BOOL(true);
   }
 
-  // useState For updatingDataArray
-  let [arrayOfData, setArrayOfData] = useState(DATA);
+function Transaction(){
 
-  return (
-    <>
-      <AddNewBtn
-        onClick={
-          addExpenseCardHandeler /*Open AddExpenseCard on click inside tag */
-        }
-      />
-      {AddExpenseCard_BOOL && (
-        <AddExpenseCard
-          onSetArrayData={setArrayOfData /**For UpdatingArrayValue */}
-          onClick={
-            setAddExpenseCard_BOOL /* Close AddExpenseCard on click inside tag */
-          }
-        />
-      )}
+    let date=new Date()
+    let getDate=date.toLocaleDateString()
+    
+    return(
+        <>
 
-      <HeadingDiv name="Transections" />
+            <AddNewBtn/>
 
       <InputField />
 
       <TotalAmount amount="2000" />
 
-      <ItemCover date="2022-03-0">
-        {arrayOfData.map((value, i) => {
-          return (
-            <Item
-              name={value.name}
-              price={value.price}
-              date={value.date}
-              time={value.time}
-              key={i}
-            />
-          );
-        })}
-      </ItemCover>
-    </>
-  );
+
+            <InputField></InputField>
+
+
+            <div className="transaction_div" style={{fontWeight:600}} >
+                <p>Total:</p>
+                <p><span className="transaction_div--total" >2000</span> $</p>
+            </div>
+
+
+            <ItemCover date="2022-03-0" >
+                <Item name="Sim Card" price="-6" date="2022-03-05" time="04:01:10" style={{color:"blue"}} />
+                <Item name="Mobile" price="-200" date="2022-03-05" time="07:06:10" />
+            </ItemCover>
+
+
+            <ItemCover date="2021-03-01">
+                <Item name="Food" price="-10" date="2021-03-01" time="22:50:00" />
+                <Item name="Back Cover" price="-3" date="2021-03-01" time="11:15:00" />
+            </ItemCover>
+
+
+            <ItemCover date="2020-09-07">
+                <Item name="Pizza" price="-20" date="2020-09-07" time="22:10:00" />
+                <Item name="Park" price="-15" date="2020-09-07" time="01:19:00" />
+            </ItemCover>
+
+
+            <ItemCover date="2019-04-06">
+                <Item name="Movie" price="-200" date="2019-04-06" time="20:58:00" />
+                <Item name="Pillow" price="-15" date="2019-04-06" time="02:01:00" />
+                <Item name="Potato" price="-3" date="2019-04-06" time="21:05:00" />
+                <Item name="Oil" price="-4" date="2019-04-06" time="22:19:00" />
+                <Item name="T-Shirt" price="-20" date="2019-04-06" time="24:15:00" />
+            </ItemCover>
+        </>
+    )
 }
 
 export default Transaction;
